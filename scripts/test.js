@@ -4,6 +4,18 @@ const { join } = require('path');
 const { exec } = require('./util');
 
 const cwd = process.cwd();
+
+function test(arr, getDir) {
+  arr.forEach(
+    (packageName) => {
+      if (name && name !== packageName) {
+        return;
+      }
+      process.chdir(getDir(packageName));
+      exec(['run', 'test', ...args], true);
+    }
+  );
+}
 const [, , name, ...args] = process.argv;
 const packages = [
   'js-linkedmap',
@@ -12,14 +24,12 @@ const packages = [
   'str-formatter'
 ];
 
-packages.forEach(
-  (packageName) => {
-    if (name && name !== packageName) {
-      return;
-    }
-    process.chdir(join(__dirname, '..', 'packages', packageName));
-    exec(['run', 'test', ...args], true);
-  }
-);
+test(packages, packageName => join(__dirname, '..', 'packages', packageName));
+
+const nodePackages = [
+  'clrsole'
+];
+
+test(nodePackages, packageName => join(__dirname, '..', 'node-packages', packageName));
 
 process.chdir(cwd);

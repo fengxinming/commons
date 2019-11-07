@@ -20,9 +20,9 @@ const es6packages = [
   'js-linkedmap',
   'properties-like'
 ];
-publish(es6packages, (packageName) => join(__dirname, '..', 'packages', packageName, 'npm'));
+publish(es6packages, packageName => join(__dirname, '..', 'packages', packageName, 'npm'));
 
 const es5packages = [
   'str-formatter'
 ];
-publish(es5packages, (packageName) => join(__dirname, '..', 'packages', packageName));
+publish(es5packages, packageName => join(__dirname, '..', 'packages', packageName));
