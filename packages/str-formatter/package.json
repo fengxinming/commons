@@ -1,0 +1,40 @@
+{
+  "name": "str-formatter",
+  "version": "1.0.0",
+  "description": "string formatter",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles --config jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/str-formatter.git"
+  },
+  "keywords": [
+    "string",
+    "formatter",
+    "format"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/str-formatter/issues"
+  },
+  "homepage": "https://github.com/fengxinming/str-formatter#readme",
+  "dependencies": {
+    "celia": "^6.1.2",
+    "js-tokens": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

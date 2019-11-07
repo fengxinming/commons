@@ -7,7 +7,8 @@ const cwd = process.cwd();
 const [, , name, ...args] = process.argv;
 const packages = [
   'js-linkedmap',
-  'properties-like'
+  'properties-like',
+  'str-formatter'
 ];
 
 packages.forEach(

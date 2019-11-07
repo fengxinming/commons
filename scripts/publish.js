@@ -3,16 +3,26 @@
 const { join } = require('path');
 const { exec } = require('./util');
 
-const [, , name, ...args] = process.argv;
-const packages = [
-  'js-linkedmap'
-];
-
-packages.forEach(
-  (packageName) => {
-    if (name && name !== packageName) {
-      return;
+function publish(arr, getDir) {
+  arr.forEach(
+    (packageName) => {
+      if (name && name !== packageName) {
+        return;
+      }
+      exec(['publish', getDir(packageName), ...args], true);
     }
-    exec(['publish', join(__dirname, '..', 'packages', packageName, 'npm'), ...args], true);
-  }
-);
+  );
+}
+
+const [, , name, ...args] = process.argv;
+
+const es6packages = [
+  'js-linkedmap',
+  'properties-like'
+];
+publish(es6packages, (packageName) => join(__dirname, '..', 'packages', packageName, 'npm'));
+
+const es5packages = [
+  'str-formatter'
+];
+publish(es5packages, (packageName) => join(__dirname, '..', 'packages', packageName));
