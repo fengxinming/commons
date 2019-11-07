@@ -6,7 +6,8 @@ const { exec } = require('./util');
 const cwd = process.cwd();
 const [, , name, ...args] = process.argv;
 const packages = [
-  'js-linkedmap'
+  'js-linkedmap',
+  'properties-like'
 ];
 
 packages.forEach(

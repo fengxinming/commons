@@ -1,0 +1,61 @@
+{
+  "name": "properties-like",
+  "version": "2.0.0",
+  "description": "Properties parser implements the Java .properties specification",
+  "main": "./index.js",
+  "module": "./esm.js",
+  "unpkg": "./umd.js",
+  "jsdelivr": "./umd.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles --config jest.config.js",
+    "build": "node ./scripts/build.js"
+  },
+  "keywords": [
+    "properties",
+    "java-properties",
+    "i18n",
+    "ini",
+    "config"
+  ],
+  "author": "Jesse Feng",
+  "license": "MIT",
+  "dependencies": {
+    "celia": "^6.1.4",
+    "js-linkedmap": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.0.0",
+    "clrsole": "^1.1.0",
+    "eslint": "^5.15.2",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "fs-extra": "^8.1.0",
+    "jest": "^24.5.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-alias": "^1.5.1",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-combine": "^1.0.0",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-flow-no-whitespace": "^1.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "uglify-js": "^3.4.9",
+    "zlib": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/properties-like.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fengxinming/properties-like/issues"
+  },
+  "homepage": "https://github.com/fengxinming/properties-like#readme"
+}
