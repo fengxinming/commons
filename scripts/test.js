@@ -8,6 +8,7 @@ const [, , name, ...args] = process.argv;
 const packages = [
   'js-linkedmap',
   'properties-like',
+  'qs-like',
   'str-formatter'
 ];
 
@@ -17,7 +18,7 @@ packages.forEach(
       return;
     }
     process.chdir(join(__dirname, '..', 'packages', packageName));
-    exec(['run', 'test', ...args]);
+    exec(['run', 'test', ...args], true);
   }
 );
 

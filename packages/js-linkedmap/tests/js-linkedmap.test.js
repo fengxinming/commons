@@ -57,7 +57,7 @@ describe('测试 LinkedMap', () => {
 
     const keys3 = [];
     const values3 = [];
-    for (let [k, v, index] of map) {
+    for (const [k, v, index] of map) {
       expect(k).not.toBe(undefined);
       expect(v).toBe(map.get(k));
       expect(index < map.size()).toBe(true);
