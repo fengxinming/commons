@@ -1,8 +1,0 @@
-*.sh
-node_modules
-logs
-npm
-legacy
-coverage
-LICENSE
-README.md
