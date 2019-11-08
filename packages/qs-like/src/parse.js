@@ -45,9 +45,9 @@ export default function (str, sep, eq, options) {
     sep = sep || '&';
     eq = eq || '=';
     options = options || {};
-    let decode = options.decodeURIComponent || unescape;
+    const decode = options.decodeURIComponent || unescape;
 
-    parse(str, sep, eq, function (key, value) {
+    parse(str, sep, eq, (key, value) => {
       value = decode(value);
       const last = result[key];
       // 没有相同的key值

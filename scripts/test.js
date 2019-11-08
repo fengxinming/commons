@@ -26,12 +26,10 @@ const packages = [
   'str-formatter'
 ];
 
-test(packages, packageName => join(__dirname, '..', 'packages', packageName));
-
 const nodePackages = [
-  'clrsole'
 ];
 
+test(packages, packageName => join(__dirname, '..', 'packages', packageName));
 test(nodePackages, packageName => join(__dirname, '..', 'node-packages', packageName));
 
 process.chdir(cwd);

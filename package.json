@@ -5,13 +5,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengxinming/tiny-modules.git"
+    "url": "git+https://github.com/fengxinming/commons.git"
   },
   "author": "Jesse Feng",
   "bugs": {
-    "url": "https://github.com/fengxinming/tiny-modules/issues"
+    "url": "https://github.com/fengxinming/commons/issues"
   },
-  "homepage": "https://github.com/fengxinming/tiny-modules#readme",
+  "homepage": "https://github.com/fengxinming/commons#readme",
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
