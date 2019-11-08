@@ -1,5 +1,5 @@
 {
-  "description": "tiny modules",
+  "description": "common modules",
   "scripts": {
     "test": "node ./scripts/test.js"
   },
