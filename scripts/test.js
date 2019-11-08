@@ -18,6 +18,8 @@ function test(arr, getDir) {
 }
 const [, , name, ...args] = process.argv;
 const packages = [
+  'array-stuff',
+  'browser-stuff',
   'js-linkedmap',
   'properties-like',
   'qs-like',
