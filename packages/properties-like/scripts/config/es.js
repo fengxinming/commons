@@ -7,8 +7,8 @@ function configure(input, output) {
   return {
     inputOptions: {
       input,
-      external: (id) => {
-        return /^celia/.test(id);
+      external(id) {
+        return /^(celia)|(js-linkedmap)|(fs)/.test(id);
       }
     },
     outputOptions: {
@@ -20,6 +20,6 @@ function configure(input, output) {
 }
 
 module.exports = [
-  configure(resolve('src/index.js'), resolve(`npm/esm.js`)),
-  configure(resolve('src/parse.js'), resolve(`npm/parse.esm.js`))
+  configure(resolve('src/index.js'), resolve('npm/esm.js')),
+  configure(resolve('src/parse.js'), resolve('npm/parse.esm.js'))
 ];

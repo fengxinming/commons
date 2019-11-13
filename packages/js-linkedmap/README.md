@@ -24,16 +24,16 @@
 ### CommonJS style with npm
 
 ```bash
-npm install linkedmap --save
+npm install js-linkedmap --save
 ```
 
 ```javascript
 
 // es6
-import LinkedMap from 'linkedmap';
+import LinkedMap from 'js-linkedmap';
 
 // node
-const LinkedMap = require('linkedmap');
+const LinkedMap = require('js-linkedmap');
 
 ```
 

@@ -34,12 +34,10 @@ In webpack env:
 ```js
 {
   module: {
-		rules: [
-			{
-				test: /\.properties$/,
-				loader: 'properties-like/webpack-loader'
-			}
-		]
+    rules: [{
+      test: /\.properties$/,
+      loader: 'properties-like/webpack-loader'
+    }]
   }
 }
 
@@ -48,7 +46,7 @@ In webpack env:
 ### Load `properties-like` via classical `<script>` tag
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/properties-like/browser/iife.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/properties-like/umd.min.js"></script>
 <script>
   var props = new Properties(); // Properties.getProperties()
   props.load('key=value\nkey2=value2');
@@ -58,7 +56,7 @@ In webpack env:
 ```
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/properties-like/browser/parse.iife.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/properties-like/parse.umd.min.js"></script>
 <script>
   var props = {};
   parseProperties('key=value\nkey2=value2', function(key, value) {

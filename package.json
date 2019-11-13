@@ -1,7 +1,8 @@
 {
   "description": "common modules",
   "scripts": {
-    "test": "node ./scripts/test.js"
+    "test": "node ./scripts/test.js",
+    "build": "node ./scripts/build.js"
   },
   "repository": {
     "type": "git",

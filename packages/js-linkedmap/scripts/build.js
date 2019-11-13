@@ -13,7 +13,7 @@ const logger = getLogger(basename(__filename, '.js'));
  * 获取所有的配置
  */
 function getAllBuilds() {
-  let mods = [];
+  const mods = [];
   readdirSync(join(__dirname, 'config'))
     .forEach((key) => {
       key = key.replace(/\.js$/, '');

@@ -4,12 +4,11 @@ const { resolve: pathResolve, relative, join, basename } = require('path');
 const util = require('util');
 const rollup = require('rollup');
 const zlib = require('zlib');
-const buble = require('rollup-plugin-buble');
-const alias = require('rollup-plugin-alias');
+const buble = require('@rollup/plugin-buble');
+const alias = require('@rollup/plugin-alias');
 const cjs = require('rollup-plugin-commonjs');
-const replace = require('rollup-plugin-replace');
+const replace = require('@rollup/plugin-replace');
 const node = require('rollup-plugin-node-resolve');
-const flow = require('rollup-plugin-flow-no-whitespace');
 const { minify } = require('uglify-js');
 const { getLogger } = require('clrsole');
 const {
@@ -18,7 +17,7 @@ const {
 } = require('../package.json');
 
 const gzip = util.promisify(zlib.gzip);
-const logger = getLogger(basename(__filename, '.js'));
+const logger = getLogger(`${name}.${basename(__filename, '.js')}`);
 const banner = `/*
  * ${name}.js v${version}
  * (c) 2018-${new Date().getFullYear()} Jesse Feng
@@ -45,11 +44,12 @@ function genConfig(name, opts) {
     replace(Object.assign({
       __VERSION__: version
     }, replacements)),
-    flow(),
     buble(),
-    alias(Object.assign({
-      '@': resolve('./')
-    }, aliases)),
+    alias({
+      entries: Object.assign({
+        '@': resolve('./')
+      }, aliases)
+    }),
     node({
       mainFields: ['module', 'main', 'jsnext'],
       browser: true
